@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             openFile = new Button();
-            richTextBox1 = new RichTextBox();
+            outputBox = new RichTextBox();
             SuspendLayout();
             // 
             // openFile
             // 
-            openFile.Location = new Point(371, 72);
+            openFile.Location = new Point(366, 73);
             openFile.Name = "openFile";
             openFile.Size = new Size(94, 29);
             openFile.TabIndex = 0;
@@ -43,21 +43,22 @@
             openFile.UseVisualStyleBackColor = true;
             openFile.Click += openFile_Click;
             // 
-            // richTextBox1
+            // outputBox
             // 
-            richTextBox1.Location = new Point(150, 136);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(539, 251);
-            richTextBox1.TabIndex = 1;
-            richTextBox1.Text = "";
+            outputBox.Cursor = Cursors.SizeNS;
+            outputBox.Location = new Point(150, 136);
+            outputBox.Name = "outputBox";
+            outputBox.ReadOnly = true;
+            outputBox.Size = new Size(539, 251);
+            outputBox.TabIndex = 1;
+            outputBox.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(828, 450);
-            Controls.Add(richTextBox1);
+            Controls.Add(outputBox);
             Controls.Add(openFile);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -69,6 +70,6 @@
         #endregion
 
         private Button openFile;
-        private RichTextBox richTextBox1;
+        private RichTextBox outputBox;
     }
 }
