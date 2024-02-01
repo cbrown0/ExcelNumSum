@@ -36,14 +36,14 @@ namespace ExcelNumSum
                     stream.Close();
                 }
 
-                // Read all lines from the CSV file
+                // Read all lines from the CSV file this loads full file into memory
                 string[] lines = File.ReadAllLines(selectedFilePath);
 
                 BigInteger totalSum = 0;
 
                 foreach (string line in lines)
                 {
-                    // Split the line by the delimiter apostrophes in this case
+                    // Split the line by the delimiter, apostrophes in this case
                     string[] values = line.Split('\'');
 
                     foreach (string value in values)
