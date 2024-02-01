@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            openFile = new Button();
+            richTextBox1 = new RichTextBox();
+            SuspendLayout();
+            // 
+            // openFile
+            // 
+            openFile.Location = new Point(350, 80);
+            openFile.Name = "openFile";
+            openFile.Size = new Size(94, 29);
+            openFile.TabIndex = 0;
+            openFile.Text = "Open File";
+            openFile.UseMnemonic = false;
+            openFile.UseVisualStyleBackColor = true;
+            openFile.Click += openFile_Click;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(150, 150);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(539, 216);
+            richTextBox1.TabIndex = 1;
+            richTextBox1.Text = "";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(828, 450);
+            Controls.Add(richTextBox1);
+            Controls.Add(openFile);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Form1";
+            Text = "Excel Sum Digits";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button openFile;
+        private RichTextBox richTextBox1;
     }
 }
