@@ -34,7 +34,7 @@
             // 
             // openFile
             // 
-            openFile.Location = new Point(350, 80);
+            openFile.Location = new Point(371, 72);
             openFile.Name = "openFile";
             openFile.Size = new Size(94, 29);
             openFile.TabIndex = 0;
@@ -45,9 +45,10 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(150, 150);
+            richTextBox1.Location = new Point(150, 136);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(539, 216);
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(539, 269);
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "";
             // 
