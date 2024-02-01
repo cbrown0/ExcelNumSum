@@ -11,7 +11,7 @@ namespace ExcelNumSum
 
         private void openFile_Click(object sender, EventArgs e)
         {
-            // Code for opening CSV files only
+            // Code for opening CSV files
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "CSV Files|*.csv|All Files|*.*";
             openFileDialog.Title = "Select a CSV File";
@@ -19,6 +19,22 @@ namespace ExcelNumSum
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string selectedFilePath = openFileDialog.FileName;
+
+                FileStream stream;
+                // Check to make sure file isn't open on user's computer
+                try
+                {
+                    stream = File.Open(selectedFilePath, FileMode.Open, FileAccess.Read, FileShare.None);
+                }
+                catch (IOException)
+                {
+                    MessageBox.Show(text: "Please close the file before trying to read it.", caption: "File in Use");
+                    return;
+                }
+                if (stream != null)
+                {
+                    stream.Close();
+                }
 
                 // Read all lines from the CSV file
                 string[] lines = File.ReadAllLines(selectedFilePath);
