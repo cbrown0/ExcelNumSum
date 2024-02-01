@@ -60,13 +60,13 @@ namespace ExcelNumSum
                 string finalTenDigits = totalSum.ToString().Substring(Math.Max(0, totalSum.ToString().Length - 10));
 
                 // Display the sum in the text box
-                richTextBox1.Text = $"Sum: {totalSum}\n\n";
+                richTextBox1.Text = $"Sum: {totalSum}\n";
 
                 // Display each digit place
                 for (int i = finalTenDigits.Length - 1; i >= 0; i--)
                 {
                     string placeName = GetPlaceName(finalTenDigits.Length - 1 - i);
-                    richTextBox1.AppendText($"{placeName}: {finalTenDigits[i]}\n");
+                    richTextBox1.AppendText($"\n{placeName}: {finalTenDigits[i]}");
                 }
             }
         }
