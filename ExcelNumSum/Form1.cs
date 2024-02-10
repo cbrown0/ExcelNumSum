@@ -12,9 +12,11 @@ namespace ExcelNumSum
         private void openFile_Click(object sender, EventArgs e)
         {
             // Code for opening CSV files
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV Files|*.csv|All Files|*.*";
-            openFileDialog.Title = "Select a CSV File";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "CSV Files|*.csv|All Files|*.*",
+                Title = "Select a CSV File"
+            };
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
